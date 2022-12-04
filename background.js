@@ -234,9 +234,10 @@ if (
       const sw = (await navigator.serviceWorker.ready).active;
       navigator.serviceWorker.onmessage = async (e) => {
         if (e.data instanceof ArrayBuffer) {
-          // send() does not transfer data
-          // const data = structuredClone(e.data, { transfer: [e.data.buffer] });
-          channel.send(data);
+          // Transfer the ArrayBuffer
+          const {byteLength} = e.data;
+          channel.send(e.data.transfer(byteLength));
+          console.log(e.data.byteLength); // 0
           // console.assert(data.byteLength === 0, {data});
           close();
         }
