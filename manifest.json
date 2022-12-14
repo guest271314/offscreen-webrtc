@@ -8,7 +8,7 @@
     "type": "module"
   },
   "host_permissions": [
-    "*://*.github.com/*"
+    "<all_urls>"
   ],
   "permissions": [
     "scripting",
