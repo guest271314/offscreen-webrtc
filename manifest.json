@@ -22,5 +22,6 @@
   },
   "action": {
     "default_title": "ServiceWorker => WebRTC => Web page"
-  }
+  },
+  "homepage_url": "https://github.com/guest271314/offscreen-webrtc"
 }
