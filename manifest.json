@@ -15,9 +15,7 @@
     "offscreen"
   ],
   "externally_connectable": {
-    "matches": [
-      "*://*.github.com/*"
-    ],
+    "matches": [],
     "ids": [
       "*"
     ]
